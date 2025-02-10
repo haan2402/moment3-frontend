@@ -1,21 +1,3 @@
 @use "base";
 @use "menu";
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: base.$font-stack;
-    background-color: base.$primary-color;
-    color: base.$text-color;
-    font-size: base.$text-size;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-    background-color: base.$dark-color;
-    color: base.$dark-text-color;
-    }
-}
+@use "layout";
