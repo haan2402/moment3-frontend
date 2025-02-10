@@ -1,0 +1,123 @@
+@use "base";
+
+header {
+    background-color: base.$header-color;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    h1 {
+        font-size: base.$header-text;
+    }
+}
+
+nav {
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: 0;
+    display: none;
+    position: fixed;
+    background-color: base.$header-color;
+    font-family: base.$font-stack;
+
+    ul {
+        list-style: none;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    li {
+        padding: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: base.$text-color;
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+}
+
+.menu-open {
+    display: flex;
+    align-items: center;
+    background-color: base.$header-color;
+    border: none;
+    padding: 10px 15px;
+}
+
+.bars {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: base.$text-color;
+    margin: 5px 10px;
+}
+
+.menu-close {
+    display: flex;
+    align-items: center;
+    background-color: base.$header-color;
+    color: base.$text-color;
+    padding: 10px 15px;
+    border: black solid 2px;
+}
+
+.cross1 {
+    width: 25px;
+    position: relative;
+    transform: rotate(45deg);
+    top: 5px;
+}
+
+.cross2 {
+    width: 25px;
+    position: relative;
+    transform: rotate(135deg);
+    top: -3px;
+}
+
+@media (min-width: 768px) {
+    .menu-open {
+        display: none;
+    }
+
+    #open-menu {
+        display: none !important;
+    }
+
+    .menu-close {
+        display: none;
+    }
+
+    h1{
+        margin-left: 30px;
+    }
+
+    nav {
+        display: block;
+        width: auto;
+        height: auto;
+        position: static;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 10px;
+        }
+    }
+
+    
+}
