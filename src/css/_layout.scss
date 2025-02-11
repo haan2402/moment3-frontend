@@ -19,6 +19,29 @@ body {
     background-color: base.$dark-color;
     color: base.$dark-text-color;
     }
+
+    .main-container,
+    .sass-container {
+        background-color: base.$dark-container-color !important;
+    }
+
+    header,
+    footer {
+        background-color: base.$dark-header !important; 
+        color: base.$dark-text-color !important;
+    }
+
+    h1 {
+        color: base.$dark-text-color; 
+    }
+
+    nav {
+        background-color: base.$dark-header !important;
+
+        a {
+            color: base.$dark-text-color;
+        }
+    }
 }
 
 /*styling for main container, centering text and pictures*/
