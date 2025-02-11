@@ -1,5 +1,6 @@
 @use "base";
 
+/*styling the basics of page*/
 *{
     margin: 0;
     padding: 0;
@@ -12,6 +13,7 @@ body {
     font-size: base.$text-size;
 }
 
+/*media queries for dark theme*/
 @media (prefers-color-scheme: dark) {
     body {
     background-color: base.$dark-color;
@@ -19,13 +21,15 @@ body {
     }
 }
 
+/*styling for main container, centering text and pictures*/
 .main-container {
     background-color: base.$container-color;
     width: 80%;
     margin: 0px auto;
     padding: 20px;
 
-    secttion {
+
+    section {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -57,12 +61,31 @@ body {
     }
 }
 
-footer {
+/*selector inheritance for header and footer, extend to use on both header and footer*/
+.header-footer-bg {
     background-color: base.$header-color;
+    color: base.$text-color;
+    padding: 20px;
+}
+
+header {
+    @extend .header-footer-bg;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    h1 {
+        font-size: base.$header-text;
+    }
+}
+
+footer {
+    @extend .header-footer-bg;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
 
     h3 {
         font-size: 1.1em;

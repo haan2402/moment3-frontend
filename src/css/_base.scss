@@ -12,6 +12,7 @@ $header-text: 1.4em;
 $dark-color: #2a344e;
 $dark-text-color: #fff;
 
+/*mixin for pictures*/
 @mixin img($width:300px, $height:300px, $box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3)) {
     width: $width;
     height: $height;
