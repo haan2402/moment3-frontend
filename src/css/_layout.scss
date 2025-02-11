@@ -18,3 +18,57 @@ body {
     color: base.$dark-text-color;
     }
 }
+
+.main-container {
+    background-color: base.$container-color;
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px;
+
+    secttion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 10px;
+    }
+
+    p {
+        text-align: left;
+        max-width: 30em;
+        padding: 10px;
+    }
+}
+
+.pic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    img {
+        @include base.img(300px, 300px, 0 2px 6px rgba(0, 0, 0, 0.3 ));
+    }
+}
+
+footer {
+    background-color: base.$header-color;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
